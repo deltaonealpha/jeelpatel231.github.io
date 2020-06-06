@@ -9,6 +9,7 @@
 div.nav-bottom{display: block;}
 #card{max-height: 130px;margin: 10px 20px 10px 20px;}
 div#card:last-child{margin: 10px 20px 80px 20px;}
+#sidemenu{display: none;}
 }
 
 @media screen and (min-width: 801px){
@@ -16,12 +17,24 @@ div#card:first-child{margin:80px 10px 10px 10px;}
 #card{margin: 10px 10px 10px 10px;}
 }
 
+a:link, a:visited {
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration:none;
+  cursor: hand;
+}
+
+a:link:active, a:visited:active {
+  color:rgba(255, 255, 255, 0.87);
+}
+
 #nav-top,#nav-bottom{
 	background: #2d2d2d;
 	width: 100%;
 	position: fixed;
 	z-index: 10;
-	box-shadow: 0 0px 8px 5px #000;
+	box-shadow: 0 0px 7px 0px #000;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 #nav-top{height: 60px;}
@@ -30,6 +43,15 @@ div#card:first-child{margin:80px 10px 10px 10px;}
 	display: none;
 	bottom: 0;
 }
+
+#sidemenu{
+	height: 100%;
+    background: #2c2c2c;
+    position: fixed;
+    z-index: 9;
+    box-shadow: 0px 0px 7px 2px;}
+
+.sidemenu-reveal{width: 370px;}
 
 #hamburger1,#hamburger2{
     color: rgba(255, 255, 255, 0.87);
@@ -55,7 +77,7 @@ div#card:first-child{margin:80px 10px 10px 10px;}
 
 #card{
 	background: rgba(255, 255, 255, 0.05);
-	max-height: 340px;
+	max-height: max-content;
 	max-width: 600px;
 	border-radius: 10px;
 	position: relative;
@@ -68,3 +90,15 @@ div#card:first-child{margin:80px 10px 10px 10px;}
 	font-family: ProductSans;
 }
 
+#head-text{
+	font-family: ProductSans;
+    width: 100%;
+    text-align: left;
+    font-size: 40px;
+}
+
+#body-text{
+	font-family: ProductSans;
+    width: 100%;
+    font-size: 24px;
+}
