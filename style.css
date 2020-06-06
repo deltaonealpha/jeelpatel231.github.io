@@ -6,18 +6,17 @@
 
 @media screen and (max-width: 800px){
 #nav-top{display: none;}
-#nav-bottom{display: block;height: 60px;}
+div.nav-bottom{display: block;}
 #card{max-height: 130px;margin: 10px 20px 10px 20px;}
 div#card:last-child{margin: 10px 20px 80px 20px;}
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 801px){
 div#card:first-child{margin:80px 10px 10px 10px;}
 #card{margin: 10px 10px 10px 10px;}
 }
 
 #nav-top,#nav-bottom{
-	height: 60px;
 	background: #2d2d2d;
 	width: 100%;
 	position: fixed;
@@ -25,24 +24,34 @@ div#card:first-child{margin:80px 10px 10px 10px;}
 	box-shadow: 0 0px 8px 5px #000;
 }
 
+#nav-top{height: 60px;}
+
 .nav-bottom{
 	display: none;
 	bottom: 0;
 }
 
-#hamburger{
+#hamburger1,#hamburger2{
     color: rgba(255, 255, 255, 0.87);
     font-size: 2.56em;
     margin: 0 0 0 10px;
     cursor: pointer;
     height: min-content;
     width: min-content;
+    transition: 200ms ease;
 }
 
 #expandup{
 	margin: 8px 0 0 0;
-	height: 44px;
+	height: 42px;
+	transition: 200ms ease;
 }
+
+.expanded-nav-bottom{
+	height: 85%;
+}
+
+.expand-rotate{transform: rotate(180deg)}
 
 #card{
 	background: rgba(255, 255, 255, 0.05);
@@ -58,3 +67,4 @@ div#card:first-child{margin:80px 10px 10px 10px;}
 	font-size: 1.5em;
 	font-family: ProductSans;
 }
+
