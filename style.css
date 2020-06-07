@@ -16,7 +16,7 @@
 	margin: 60px 0 0 0;
 }
 
-#scrollale-bottom{
+#scrollable-bottom{
 	margin: 0 0 0 0;
 }
 
@@ -102,7 +102,7 @@ transform: translateY(0px);
 
 #card{
 	background: rgba(255, 255, 255, 0.05);
-	max-height: max-content;
+	max-height: auto;
 	max-width: 600px;
 	border-radius: 10px;
 	position: relative;
