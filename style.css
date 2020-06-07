@@ -102,7 +102,7 @@ transform: translateY(0px);
 
 #card{
 	background: rgba(255, 255, 255, 0.05);
-	height: auto;
+	max-height: none;
 	max-width: 600px;
 	border-radius: 10px;
 	position: relative;
