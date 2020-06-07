@@ -8,16 +8,23 @@
 <head>
 	<title>Material</title>
 </head>
-<body bgcolor="#121212">
+<body bgcolor="#121212" class="scroll-hide">
 
 <div id="nav-top">
-	<div onclick="sidemenu()" id="hamburger1">&#9776;</div>
+	<div id="hamburger1"><img  onclick="sidemenu();" id="expandup" src="menu-24px.svg"></div>
 </div>
 
-<div id="sidemenu"></div>
+<div id="sidemenu">
+	<div id="scrollable-side" class="scroll-hide">
+		<div></div>
+	</div>
+</div>
 
 <div id="nav-bottom" class="nav-bottom">
 	<div id="hamburger2"><img  onclick="move();" id="expandup" src="expand_less-24px.svg"></div>
+	<div id="scrollable-bottom" class="scroll-hide">
+		<div></div>
+	</div>
 </div>
 
 <center>
