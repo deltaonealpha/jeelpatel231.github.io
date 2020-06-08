@@ -18,6 +18,7 @@
 
 #scrollable-bottom{
 	margin: 0 0 0 0;
+	padding: 10px;
 }
 
 @media screen and (max-width: 800px){
@@ -49,7 +50,7 @@ a:link:active, a:visited:active {
 	position: fixed;
 	z-index: 10;
 	box-shadow: 0 0px 7px 0px #000;
-	transition: 200ms;
+	transition: 200ms cubic-bezier(1, 0.00, 0.30, 1.0);
 }
 
 #nav-top{height: 60px;}
@@ -68,15 +69,17 @@ a:link:active, a:visited:active {
     z-index: 9;
     box-shadow: 0px 0px 7px 2px;
 	-webkit-overflow-scrolling: touch;
+	transition: 200ms cubic-bezier(1, 0.00, 0.30, 1.0);
 }
 
+.sidemenu{width: 0px;}
 .sidemenu-reveal{width: 370px;}
 
 #hamburger1,#hamburger2{
     color: rgba(255, 255, 255, 0.87);
     font-size: 2.56em;
     cursor: pointer;
-    transition: 200ms ease;
+    transition: 200ms cubic-bezier(1, 0.00, 0.30, 1.0);
 }
 
 #hamburger1{
@@ -126,4 +129,17 @@ transform: translateY(0px);
 	font-family: ProductSans;
     width: 100%;
     font-size: 24px;
+}
+
+#pill{
+	border: 2px solid #9c9c9c;
+    padding: 5px;
+    border-radius: 1000px;
+    font-family: ProductSans;
+    font-weight: 800;
+    height: auto;
+    margin: 13px 0px 0 10px;
+    display: inline-flex;
+    width: max-content;
+    color: rgba(255, 255, 255, 0.87);
 }
