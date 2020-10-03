@@ -1,0 +1,100 @@
+*{margin: 0px; padding: 0px;}
+
+
+@keyframes drop{
+	0%{height: 30px; width: 30px;top:-10%;}
+	20%{height: 30px; width: 30px;top:60%;}
+	33%{height: 30px; width: 30px;top:50%;}
+	75%{}
+	100%{}
+}
+
+@keyframes text{
+	0%{color: #00000000}
+	75%{color: #00000000}
+	100%{color: #ffffffee}
+}
+
+@keyframes show-bar{
+	0%{opacity: 0;}
+	75%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+#container{
+/*	background: #ffffff18;*/
+	height: 600px;
+	width: 400px;
+	border-radius: 7px;
+ 	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	position: absolute;
+	overflow: hidden;
+}
+
+
+.fill{
+	background: #ffffff18;
+	height: 200%;
+	width: 300%;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	animation: drop 1s ease-in-out;
+	position: absolute;
+	border-radius: 100000000000000px;
+	border-bottom: 10px #ffffff18;
+}
+
+.textbox{
+	height: 600px;
+	width: 2000px;
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffffee;
+	animation: text 1s ease;
+}
+
+.text{
+	color: #ffffffee;
+	animation: text 1s ease;
+}
+
+.page{
+	width: 400px;
+	display: table-cell;
+	height: 600px;
+	animation: show-bar 1s ease;
+	margin: 0px;padding: 10px;
+}
+
+
+#button-bar{
+	position: absolute;
+	bottom: 0px;
+	animation: show-bar 1s ease;
+	border-top: 3px solid #ffffff18;
+	width: 100%;
+}
+
+.button{
+	height: 40px;
+    width: 74px;
+    padding: 10px 0 0 0;
+    text-align: center;
+    border-right: 3px solid #ffffff18;
+    color: #fff;
+    font-size: 13px;
+    text-overflow: clip;
+}
+
+div.button:last-child{
+	border-right: 0px solid #ffffff18;
+}
+
+div#button-bar > div.button{
+	display: inline-block;
+}
