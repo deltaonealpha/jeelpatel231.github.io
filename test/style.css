@@ -4,7 +4,7 @@
 @font-face{font-family: "ProductSans";src: url("fonts/ProductSans-Regular.ttf") format("truetype"); }
 
 @keyframes drop{
-	0%{height: 30px; width: 30px;}
+	0%{height: 30px; width: 30px;top: 20%;}
 	30%{height: 30px; width: 30px;top:50%;}
 }
 
@@ -26,7 +26,6 @@ a,a:visited,a:hover{
 }
 
 #container{
-/*	background: #ffffff18;*/
 	height: 600px;
 	width: 400px;
 	border-radius: 7px;
@@ -45,7 +44,6 @@ a,a:visited,a:hover{
 	top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-	/*animation: drop 1s ease-in-out;*/
 	position: absolute;
 	border-radius: 100000000000000px;
 	border-bottom: 10px #ffffff18;
@@ -59,20 +57,19 @@ a,a:visited,a:hover{
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffffee;
-	/*animation: show 1s ease;*/
 }
 
 .text{
 	color: #ffffffee;
-	/*animation: show 1s ease;*/
 }
 
 .page{
 	width: 400px;
 	display: table-cell;
 	height: 600px;
-	/*animation: show 1s ease;*/
 	margin: 0px;padding: 20px;
+	word-break: break-word;
+    position: relative;
 }
 
 
@@ -89,9 +86,9 @@ a,a:visited,a:hover{
 }
 
 .button{
-	height: 40px;
+    height: 55px;
     width: 80px;
-    padding: 10px 0 0 0;
+    padding: 5px 0 0 0;
     text-align: center;
     border-right: 1.5px solid #ffffff18;
     border-left: 1.5px solid #ffffff18;
