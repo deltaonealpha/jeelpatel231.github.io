@@ -1,24 +1,23 @@
-*{margin: 0px; padding: 0px;}
+*{margin: 0px; padding: 0px;font-family: ProductSans}
 
+
+@font-face{font-family: "ProductSans";src: url("fonts/ProductSans-Regular.ttf") format("truetype"); }
 
 @keyframes drop{
-	0%{height: 30px; width: 30px;top:20%;}
-	20%{height: 30px; width: 30px;top:60%;}
-	33%{height: 30px; width: 30px;top:50%;}
-	75%{}
-	100%{}
+	0%{height: 30px; width: 30px;}
+	30%{height: 30px; width: 30px;top:50%;}
 }
 
-@keyframes text{
-	0%{color: #00000000}
-	75%{color: #00000000}
-	100%{color: #ffffffee}
-}
-
-@keyframes show-bar{
+@keyframes show{
 	0%{opacity: 0;}
 	75%{opacity: 0;}
 	100%{opacity: 1;}
+}
+
+@keyframes loader-loop{
+	0%{height: 30px; width: 30px;top:20%;}
+	50%{height: 30px; width: 30px;top:60%;} /* 20% earlier*/
+	100%{height: 30px; width: 30px;top:20%;}
 }
 
 #container{
@@ -41,7 +40,7 @@
 	top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-	animation: drop 1s ease-in-out;
+	/*animation: drop 1s ease-in-out;*/
 	position: absolute;
 	border-radius: 100000000000000px;
 	border-bottom: 10px #ffffff18;
@@ -55,28 +54,28 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffffee;
-	animation: text 1s ease;
+	/*animation: show 1s ease;*/
 }
 
 .text{
 	color: #ffffffee;
-	animation: text 1s ease;
+	/*animation: show 1s ease;*/
 }
 
 .page{
 	width: 400px;
 	display: table-cell;
 	height: 600px;
-	animation: show-bar 1s ease;
-	margin: 0px;padding: 10px;
+	/*animation: show 1s ease;*/
+	margin: 0px;padding: 20px;
 }
 
 
 #button-bar{
 	position: absolute;
 	bottom: 0px;
-	animation: show-bar 1s ease;
-	border-top: 3px solid #ffffff18;
+	animation: show 1s ease;
+	border-top: 1.5px solid #ffffff18;
 	width: 100%;
 }
 
@@ -86,14 +85,21 @@
 
 .button{
 	height: 40px;
-    width: 74px;
+    width: 80px;
     padding: 10px 0 0 0;
     text-align: center;
-    border-right: 3px solid #ffffff18;
+    border-right: 1.5px solid #ffffff18;
+    border-left: 1.5px solid #ffffff18;
+    border-top: 1.5px solid #ffffff18;
     color: #fff;
     font-size: 13px;
     text-overflow: clip;
     cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover{
+  background: #ffffff40 radial-gradient(circle, transparent 1%, #ffffff18 1%) center/15000%;
 }
 
 div.button:last-child{
@@ -101,7 +107,11 @@ div.button:last-child{
 }
 
 div#button-bar > div.button{
-	display: inline-block;
+	display: table-cell;
+}
+
+.active{
+	background: #ffffff40 radial-gradient(circle, transparent 1%, #ffffff18 1%) center/15000%;
 }
 
 .content-box{

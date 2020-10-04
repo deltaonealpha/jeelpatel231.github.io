@@ -1,3 +1,20 @@
+document.onreadystatechange = function() { 
+    if (document.readyState !== "complete") { 
+        document.querySelector(".fill").style.animation = "loader-loop 400ms infinite";
+        document.querySelector(".textbox").style.display = "none";
+        document.querySelector("#button-bar").style.display = "none";
+
+    } 
+    else { 
+        document.querySelector(".fill").style.animation = "drop 1s ease";
+        document.querySelector(".textbox").style.animation = "show 1s ease";
+        document.querySelector("#button-bar").style.animation = "show 1s ease";
+        document.querySelector(".textbox").style.display = "block";
+        document.querySelector("#button-bar").style.display = "block";
+    } 
+}; 
+
+
 function toggle_1() {
 	document.getElementById('textbox').style.transform = "translate(-10%,-50%)";
 	document.title = "Jeel | About Me";
