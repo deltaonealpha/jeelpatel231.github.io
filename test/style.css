@@ -20,6 +20,11 @@
 	100%{height: 30px; width: 30px;top:20%;}
 }
 
+a,a:visited,a:hover{
+	color: #ffffffee;
+	text-decoration: none;
+}
+
 #container{
 /*	background: #ffffff18;*/
 	height: 600px;
