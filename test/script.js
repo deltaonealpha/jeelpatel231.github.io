@@ -1,7 +1,6 @@
 document.onreadystatechange = function() { 
     if (document.readyState !== "complete") { 
         document.querySelector(".fill").style.animation = "loader-loop 400ms infinite";
-        document.querySelector(".textbox").style.display = "none";
         document.querySelector("#button-bar").style.display = "none";
 
     } 
@@ -13,7 +12,6 @@ document.onreadystatechange = function() {
         document.querySelector("#button-bar").style.display = "block";
     } 
 }; 
-
 
 function toggle_1() {
 	document.getElementById('textbox').style.transform = "translate(-10%,-50%)";
